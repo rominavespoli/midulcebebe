@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Shadows+Into+Light&display=swap');
+$colorFondo: linear-gradient(to bottom,  rgb(100, 8, 8), rgba(185, 3, 3, 0.795) );
+$colorInicio:  rgb(120, 9, 9);
+$colorTitulos: rgb(100, 8, 8);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: $colorInicio;
+    font-family: 'Shadows Into Light', cursive; 
+    font-size: larger;
+    color: white;
+    box-shadow: 2px 2px 2px black;
+    
+}
+.navbar-brand{
+    font-family: 'Fredoka One', cursive;
+    font-size: xx-large;
+}
+.aparicion { 
+	animation: 1s aparicion 1; 
+	transform-origin: top left;
+}
+@keyframes aparicion
+{
+	0% { opacity: 0; }
+	50% { opacity: 0.8; }
+}
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+.inicio_sec{
+    background-image: url(multi/bebe.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+}
+
+footer{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    background-color: $colorInicio;
+    color: white;
+    font-family: 'Shadows Into Light', cursive; 
+    i{
+        letter-spacing: 20px;
+        color: white;
+    }
+}
+.menu_prin li a{
+    font-size:larger;
+}
+.redes {
+    background-color: white ;
+    color: black;
+    i{
+        color: black;
+        &:hover{
+            color: red;
+        }
+    }
+}
+#menu{
+    background-color: white;
+    button{
+        border-color: black;
+        background-color: $colorInicio;
+    }
+}
+#ul_menu li a{ 
+    color: black;
+    font-size: larger;
+}
+.sec_nosotros{
+    overflow: hidden;
+}
+h2{
+    color: white;
+    text-align: center;
+    background-color: $colorTitulos;
+    margin: 0;
+    font-family: 'Shadows Into Light', cursive; 
+}
+.nright{
+    background-image: $colorFondo;
+    img{
+        padding: 30px;
+    }
+}
+.nleft{
+    background-image: $colorFondo;
+    p{
+        text-align: justify;
+        padding: 15px;
+        font-size: 25px;
+        color: white;
+        font-family: 'Shadows Into Light', cursive; 
+        line-height: 50px;
+        &::first-letter{
+            font-size: 50px;
+            font-weight: bold;
+        }
+    }
+}
+h3{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    color: white; 
+    font-family: 'Shadows Into Light', cursive; 
+}
+#galeriaProd{
+    background-image: $colorFondo;
+    .col-lg-4{
+    padding: 25px;
+    img{
+        width: 100%;
+        height: 250px;
+        &:hover{
+            transform: scale(1.3);
+        }
+    }
+    }
+}
+.contacto_form{
+    background-image: $colorFondo;
+    height: 600px;
+    form{
+        padding: 20px;
+        color: white;
+        font-family: 'Shadows Into Light', cursive; 
+        font-size:x-large;
+    .btn{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    }
+    }
+}
+.ubicacion_map{
+    background-image: $colorFondo;
+    .map{
+        padding: 20px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .navbar-brand{
+        font-size: 25px;
+    }
+}
