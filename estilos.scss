@@ -14,7 +14,6 @@ $colorTitulos: rgb(100, 8, 8);
     font-size: larger;
     color: white;
     box-shadow: 2px 2px 2px black;
-    
 }
 .navbar-brand{
     font-family: 'Fredoka One', cursive;
@@ -37,9 +36,8 @@ $colorTitulos: rgb(100, 8, 8);
     background-image: url(multi/bebe.jpg);
     background-size: cover;
     background-position: center;
-    height: 900px;
+    height: 800px;
 }
-
 footer{
     height: auto;
     width: 100%;
@@ -91,6 +89,7 @@ h2{
     background-image: $colorFondo;
     img{
         padding: 30px;
+        height: 650px;
     }
 }
 .nleft{
@@ -101,11 +100,22 @@ h2{
         font-size: 25px;
         color: white;
         font-family: 'Shadows Into Light', cursive; 
-        line-height: 50px;
+        line-height: 60px;
         &::first-letter{
             font-size: 50px;
             font-weight: bold;
         }
+        strong{
+            text-transform: uppercase;
+            
+        }       
+    }
+    ul{
+        padding-left: 40px;
+        font-size: 25px;
+        color: white;
+        font-family: 'Shadows Into Light', cursive; 
+        line-height: 50px; 
     }
 }
 h3{
@@ -117,6 +127,7 @@ h3{
 }
 #galeriaProd{
     background-image: $colorFondo;
+    height: auto;
     .col-lg-4{
     padding: 25px;
     img{
@@ -130,21 +141,52 @@ h3{
 }
 .contacto_form{
     background-image: $colorFondo;
-    height: 600px;
+    overflow: hidden;
     form{
-        padding: 20px;
+        padding: 40px;
         color: white;
         font-family: 'Shadows Into Light', cursive; 
         font-size:x-large;
+        line-height: 60px;
     .btn{
     background-color: white;
     color: black;
     border: 2px solid black;
     }
     }
-}
+    .telefono{
+        padding: 20px;
+        color: white;
+        font-family: 'Shadows Into Light', cursive; 
+        font-size:x-large;
+        line-height: 60px;
+        text-align: left;
+        a{
+            font-size: xx-large;
+            text-decoration: none;
+            color: white;
+            font-family: 'Shadows Into Light', cursive;
+        }
+        img{
+            animation-name: traslado;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+        }
+            @keyframes traslado{
+                0%{
+                    opacity: 0;
+                }
+                
+                100%{
+                    opacity:1;
+                    transform: translateX(200px);
+                }
+            }
+    }
+} 
 .ubicacion_map{
     background-image: $colorFondo;
+    overflow: hidden;
     .map{
         padding: 20px;
     }
@@ -152,5 +194,16 @@ h3{
 @media only screen and (max-width: 480px){
     .navbar-brand{
         font-size: 25px;
+    }
+}
+@media only screen and (max-width:1024px){
+    @keyframes traslado{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity:1;
+            transform: translateX(30px);
+        }
     }
 }
